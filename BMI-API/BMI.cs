@@ -19,16 +19,19 @@
             return Bmi;
         }
 
+        // Basic BMI calculation.
         private double CalculateBmi()
         {
             return Weight / (HeightInMeters * HeightInMeters);
         }
 
+        // Turning value from cm to meters for cleaner code in calculations.
         private double CalculateHeightInMeters()
         {
             return Height / 100.0;
         }
 
+        // Returns the BMI category.
         public string BMICategory()
         {
             if (Bmi < 18.5)
@@ -60,6 +63,7 @@
             return "Your ideal weight range is between " + minWeight + "kg and " + maxWeight + "kg.";
         }
 
+        // Returns recommandations based on the BMI.
         public string Recommandations()
         {
             if (Bmi < 18.5)
